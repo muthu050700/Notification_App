@@ -11,6 +11,7 @@ function App() {
     generateToken();
     onMessage(messaging, (payload) => {
       toast(payload.notification.body);
+      console.log(payload);
     });
   }, []);
 
