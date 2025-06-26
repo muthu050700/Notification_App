@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Button, Col, Form, FormGroup, Input, Label } from "reactstrap";
 import { addUser } from "../../../store/userSlice";
@@ -16,9 +16,12 @@ const Login = () => {
         }
     });
 
+    const userData = JSON.parse(localStorage.getItem("User"));
+
     const navigate = useNavigate();
 
     const userInfo = useSelector((store) => store.user.userInfo);
+
     const dispatch = useDispatch();
 
     const handleChange = (e) => {
@@ -81,15 +84,22 @@ const Login = () => {
             }))
         }
 
-        dispatch(addUser({ email, password }));
+        localStorage.setItem("User", JSON.stringify({ email, password }));
 
         navigate("/");
 
     }
 
+    useEffect(() => {
+        console.log("useEffect called");
+        if (userInfo === null) {
+            dispatch(addUser(userData || null));
+        }
+    }, [])
+
     return (
         <div className=" flex w-full h-[100vh] items-center justify-center bg-[#030303] ">
-            <div className=" w-[500px] p-6 m-3 rounded-lg" style={{ boxShadow: " 2px 3px 10px 2px #123458" }}>
+            <div className=" w-[500px] p-6 m-3 rounded-lg" style={{ boxShadow: " 1px 1px 10px 6px #578E7E" }}>
                 <Form className="">
                     <div>
                         <h2 className=" font-bold text-2xl text-[#D4C9BE]">Hey, Welcome</h2>
@@ -119,7 +129,7 @@ const Login = () => {
                     </div>
 
                     <div className=" pt-3">
-                        <p className=" text-[#D4C9BE]">Doesn't have an account yet? <span className=" text-[#123458] border-b-2 font-bold">Sign Up</span></p>
+                        <p className=" text-[#D4C9BE]">Doesn't have an account yet? <span className=" text-[#578E7E] border-b-2 font-bold">Sign Up</span></p>
                     </div>
 
                 </Form>
