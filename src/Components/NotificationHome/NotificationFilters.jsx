@@ -19,11 +19,11 @@ const NotificationFilters = () => {
     }]
     return (
         <>
-            <div className="flex justify-evenly items-center py-2 fixed w-full top-0 overflow-hidden h-[12vh] bg-[#d8e2dc] border-b-[1px] border-b-[#bcbd8b] p-2 shadow-xl z-10">
+            <div className="flex justify-evenly items-center py-2 fixed w-full top-0 overflow-hidden h-[10vh] bg-[#d8e2dc] border-b-[1px] border-b-[#bcbd8b] p-2 shadow-xl z-10">
                 {
                     filterList.map((item) => {
                         return (
-                            <div key={item.id} className={`w-[100px] h-[50px]  rounded-2xl flex justify-center items-center ${item.bgColor} cursor-pointer`}>
+                            <div key={item.id} className={`w-[100px] h-[50px]  rounded-2xl flex justify-center items-center my-2 ${item.bgColor} cursor-pointer`}>
                                 <p className="text-lg font-bold text-center m-0">{item.name}</p>
                             </div>
                         )
