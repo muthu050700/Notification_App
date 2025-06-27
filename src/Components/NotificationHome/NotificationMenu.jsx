@@ -37,18 +37,16 @@ const NotificationMenu = () => {
 
     return (
         <>
-            <div className="flex justify-evenly items-center py-2 gap-3 fixed w-full bottom-0 overflow-hidden h-[12vh] bg-[#a6a2a2] p-2 shadow-lg z-10">
+            <div className="flex justify-evenly items-center py-2 gap-3 fixed w-full bottom-0 overflow-hidden h-[10vh] bg-[#a6a2a2] p-2 shadow-lg z-10">
                 {
                     filterList.map((item) => {
                         return (
                             <div>
-
                                 <div key={item.id} className={`w-[50px] h-[50px]  rounded-2xl flex flex-col justify-center items-center cursor-pointer`}>
                                     <img className=" w-[20px]" src={item.imageURL} />
                                     <p className="text-medium font-bold text-center m-0">{item.name}</p>
                                 </div>
                             </div>
-
                         )
                     })
                 }
