@@ -19,7 +19,7 @@ const NotificationFilters = () => {
     }]
     return (
         <>
-            <div className="flex justify-evenly items-center py-2 fixed w-full top-0 overflow-hidden h-[10vh] bg-[#d8e2dc] border-b-[1px] border-b-[#bcbd8b] p-2 shadow-xl z-10">
+            <div className="flex justify-evenly items-center py-2 fixed w-full top-0 overflow-hidden h-[8vh] bg-[#d8e2dc] border-b-[1px] border-b-[#bcbd8b] p-2 shadow-xl z-10">
                 {
                     filterList.map((item) => {
                         return (
