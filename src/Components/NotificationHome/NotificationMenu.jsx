@@ -1,10 +1,11 @@
 import settings from "../../assets/settings.png";
 import pending from "../../assets/wall-clock.png";
 import shoppingCart from "../../assets/shopping-cart.png";
-const NotificationMenu = () => {
+import crossImg from "../../assets/cross-button.png"
+const NotificationMenu = ({ setIsMenuOpen }) => {
     const filterList = [{
         id: 1,
-        name: "Approve",
+        name: "Menu",
         bgColor: "bg-amber-300",
         textColor: "text-black",
         imageURL: "https://i.pinimgproxy.com/?url=aHR0cHM6Ly9jZG4taWNvbnMtcG5nLmZsYXRpY29uLmNvbS8yNTYvOTQ1MC85NDUwODkzLnBuZw==&ts=1751051049&sig=14f404fea0f6e4d7c3b457e97bd1a2a15f8a5e95c1326cc27f802c7e314856d2"
@@ -13,7 +14,7 @@ const NotificationMenu = () => {
         name: "Reject",
         bgColor: "bg-green-500",
         textColor: "text-white",
-        imageURL: "https://i.pinimgproxy.com/?url=aHR0cHM6Ly9jZG4taWNvbnMtcG5nLmZsYXRpY29uLmNvbS8yNTYvNzE3Mi83MTcyMDcwLnBuZw==&ts=1751051404&sig=ee8317f7904b3ba342a15bdff9c7e7c4078dc527f96be94ae28f66d262ecc907"
+        imageURL: crossImg
     }, {
         id: 3,
         name: "Pending",
@@ -33,7 +34,11 @@ const NotificationMenu = () => {
         bgColor: "bg-yellow-500",
         textColor: "text-black",
         imageURL: shoppingCart
-    }]
+    }];
+
+    const handleMenuBar = () => {
+        setIsMenuOpen((prev) => !prev);
+    };
 
     return (
         <>
@@ -42,7 +47,9 @@ const NotificationMenu = () => {
                     filterList.map((item) => {
                         return (
                             <div>
-                                <div key={item.id} className={`w-[50px] h-[50px]  rounded-2xl flex flex-col justify-center items-center cursor-pointer`}>
+                                <div key={item.id} className={`w-[50px] h-[50px]  rounded-2xl flex flex-col justify-center items-center cursor-pointer`} onClick={() => {
+                                    item.name === "Menu" ? handleMenuBar() : "";
+                                }}>
                                     <img className=" w-[20px]" src={item.imageURL} />
                                     <p className="text-medium font-bold text-center m-0">{item.name}</p>
                                 </div>
