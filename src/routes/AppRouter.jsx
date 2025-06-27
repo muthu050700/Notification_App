@@ -5,13 +5,15 @@ import Home from "../Components/Home/Home";
 import App from "../App";
 import NotificationList from "../Components/NotificationList/NotificationList";
 import { AuthRoute } from "./AuthRoute";
+import NotificationHome from "../Components/NotificationHome/NotificationHome";
 
 const AppRouter = createBrowserRouter([
     {
         path: "/",
         element: <App />,
         children: [
-            { path: "/", element: <AuthRoute><NotificationList /></AuthRoute> },
+            { path: "/", element: <AuthRoute><NotificationHome /></AuthRoute> },
+            { path: "/notification-list", element: <AuthRoute><NotificationList /></AuthRoute> },
             { path: "/login", element: <Login /> },
             { path: "/register", element: <Register /> }
         ]

@@ -98,38 +98,38 @@ const Login = () => {
     }, [])
 
     return (
-        <div className=" flex w-full h-[100vh] items-center justify-center bg-[#030303] ">
-            <div className=" w-[500px] p-6 m-3 rounded-lg" style={{ boxShadow: " 1px 1px 10px 6px #578E7E" }}>
+        <div className=" flex w-full h-[100vh] items-center justify-center bg-[#f1faee] ">
+            <div className=" w-[500px] p-6 m-3 rounded-lg" style={{ boxShadow: " 1px 1px 10px 6px #457b9d" }}>
                 <Form className="">
                     <div>
-                        <h2 className=" font-bold text-2xl text-[#D4C9BE]">Hey, Welcome</h2>
+                        <h2 className=" font-extrabold text-3xl text-[#1d3557]">Hey, Welcome</h2>
                     </div>
                     <FormGroup row>
-                        <Label for="exampleEmail" sm={2} className="text-[#D4C9BE]" >
+                        <Label for="exampleEmail" sm={2} className="text-[#1d3557] font-medium" >
                             Email
                         </Label>
                         <Col sm={10}>
-                            <Input id="email" name="email" placeholder="Email" type="email" value={loginInfo.email} onChange={(e) => handleChange(e)} style={{ backgroundColor: "#D4C9BE", color: "#123458", fontSize: "17px", fontWeight: "medium", border: loginInfo.errorDetails.isEmailError ? "2px solid red" : "" }} />
-                            {loginInfo?.errorDetails?.isEmailError ? <span className=" text-red-500">{loginInfo.errorDetails.emailErrorMsg}</span> : null}
+                            <Input id="email" name="email" placeholder="Email" type="email" value={loginInfo.email} onChange={(e) => handleChange(e)} style={{ backgroundColor: "#a8dadc", color: "#123458", fontSize: "17px", fontWeight: "medium", border: loginInfo.errorDetails.isEmailError ? "2px solid red" : "" }} />
+                            {loginInfo?.errorDetails?.isEmailError ? <span className=" text-[#e63946]">{loginInfo.errorDetails.emailErrorMsg}</span> : null}
                         </Col>
                     </FormGroup>
                     <FormGroup row>
-                        <Label for="examplePassword" sm={2} className="text-[#D4C9BE]" >
+                        <Label for="examplePassword" sm={2} className="text-[#1d3557] font-medium" >
                             Password
                         </Label>
                         <Col sm={10}>
-                            <Input id="password" name="password" placeholder="Password" type="password" value={loginInfo.password} onChange={(e) => handleChange(e)} style={{ backgroundColor: "#D4C9BE", color: "#123458", fontSize: "17px", fontWeight: "medium", border: loginInfo.errorDetails.isPasswordError ? "2px solid red" : "" }} />
-                            {loginInfo?.errorDetails?.isPasswordError ? <span className=" text-red-500">{loginInfo.errorDetails.passwordErrorMsg}</span> : null}
+                            <Input id="password" name="password" placeholder="Password" type="password" value={loginInfo.password} onChange={(e) => handleChange(e)} style={{ backgroundColor: "#a8dadc", color: "#123458", fontSize: "17px", fontWeight: "medium", border: loginInfo.errorDetails.isPasswordError ? "2px solid red" : "" }} />
+                            {loginInfo?.errorDetails?.isPasswordError ? <span className=" text-[#e63946]">{loginInfo.errorDetails.passwordErrorMsg}</span> : null}
                         </Col>
                     </FormGroup>
 
                     <div className=" flex justify-between">
-                        <Button className="bg-black" onClick={handleLogin}>Login</Button>
-                        <p className="mb-0 pt-2 text-[#D4C9BE]">Forgot password?</p>
+                        <button className="bg-[#f77f00] text-[#1d3557] px-4 py-2 font-medium" style={{ borderRadius: "20px" }} onClick={handleLogin}>Login</button>
+                        <p className="mb-0 pt-2 text-[#415a77]">Forgot password?</p>
                     </div>
 
                     <div className=" pt-3">
-                        <p className=" text-[#D4C9BE]">Doesn't have an account yet? <span className=" text-[#578E7E] border-b-2 font-bold">Sign Up</span></p>
+                        <p className=" text-[#14213d]">Doesn't have an account yet? <span className=" text-[#415a77] border-b-2 font-bold">Sign Up</span></p>
                     </div>
 
                 </Form>

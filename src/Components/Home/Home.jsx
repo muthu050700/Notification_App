@@ -5,11 +5,9 @@ import { SkeletonTheme } from "react-loading-skeleton";
 
 const Home = () => {
     return (
-
         <Provider store={appStore}>
             <Outlet />
         </Provider>
-
     )
 }
 
