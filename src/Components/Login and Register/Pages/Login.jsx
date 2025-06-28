@@ -105,7 +105,7 @@ const Login = () => {
                     <div className=" mt-2 mb-[45px]">
                         <h2 className=" font-bold text-3xl text-[#3d405b]">Hey, Welcome</h2>
                     </div>
-                    <div className="mb-4">
+                    <div className="mb-5">
                         {/* <Label for="exampleEmail" sm={2} className="text-[#3d405b] font-medium" >
                             Email
                         </Label> */}
@@ -114,7 +114,7 @@ const Login = () => {
                             {loginInfo?.errorDetails?.isEmailError ? <span className=" text-[#e63946]">{loginInfo.errorDetails.emailErrorMsg}</span> : null}
                         </Col>
                     </div>
-                    <div className="mb-4">
+                    <div className="mb-5">
                         {/* <Label for="examplePassword" sm={2} className="text-[#3d405b] font-medium" >
                             Password
                         </Label> */}
