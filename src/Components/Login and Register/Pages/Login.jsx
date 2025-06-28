@@ -100,7 +100,7 @@ const Login = () => {
 
     return (
         <div className="flex w-full h-[100vh] items-center justify-center bg-gradient-to-br from-[#fef9e7] via-[#dbeafe] to-[#96C1EC]">
-            <div className=" w-[500px] p-6 m-3 rounded-lg bg-[#FFFCFB]" style={{ boxShadow: " 1px 1px 0px 1px #F4E7E1" }}>
+            <div className=" w-[500px] p-6 m-3 rounded-xl bg-[#FFFCFB]" >
                 <Form className="">
                     <div className=" mt-2 mb-[50px]">
                         <h2 className=" font-bold text-3xl text-[#3d405b]">Hey, Welcome</h2>
