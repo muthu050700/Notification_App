@@ -102,7 +102,7 @@ const Login = () => {
         <div className=" flex w-full h-[100vh] items-center justify-center bg-[#fefae0]">
             <div className=" w-[500px] p-6 m-3 rounded-lg bg-[#FFFCFB]" style={{ boxShadow: " 1px 1px 5px 1px #F4E7E1" }}>
                 <Form className="">
-                    <div className=" mt-2 mb-[45px]">
+                    <div className=" mt-2 mb-[50px]">
                         <h2 className=" font-bold text-3xl text-[#3d405b]">Hey, Welcome</h2>
                     </div>
                     <div className="mb-5">
@@ -114,7 +114,7 @@ const Login = () => {
                             {loginInfo?.errorDetails?.isEmailError ? <span className=" text-[#e63946]">{loginInfo.errorDetails.emailErrorMsg}</span> : null}
                         </Col>
                     </div>
-                    <div className="mb-5">
+                    <div className="mb-4">
                         {/* <Label for="examplePassword" sm={2} className="text-[#3d405b] font-medium" >
                             Password
                         </Label> */}
