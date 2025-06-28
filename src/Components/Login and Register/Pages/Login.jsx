@@ -102,27 +102,31 @@ const Login = () => {
         <div className=" flex w-full h-[100vh] items-center justify-center bg-[#fefae0]">
             <div className=" w-[500px] p-6 m-3 rounded-lg bg-[#FFFCFB]" style={{ boxShadow: " 1px 1px 5px 1px #F4E7E1" }}>
                 <Form className="">
-                    <div>
+                    <div className=" mt-2 mb-[45px]">
                         <h2 className=" font-bold text-3xl text-[#3d405b]">Hey, Welcome</h2>
                     </div>
-                    <FormGroup row>
-                        <Label for="exampleEmail" sm={2} className="text-[#3d405b] font-medium" >
+                    <div className="mb-4">
+                        {/* <Label for="exampleEmail" sm={2} className="text-[#3d405b] font-medium" >
                             Email
-                        </Label>
+                        </Label> */}
                         <Col sm={10}>
-                            <Input id="email" name="email" placeholder="Email" type="email" value={loginInfo.email} onChange={(e) => handleChange(e)} style={{ backgroundColor: "#faedcd", color: "#123458", fontSize: "17px", fontWeight: "medium", border: loginInfo.errorDetails.isEmailError ? "2px solid red" : "" }} />
+                            <input id="email" name="email" placeholder="Email" type="email" value={loginInfo.email} onChange={(e) => handleChange(e)} className=" w-full border-b-2 border-[#e6ccb2] bg-[#FFFCFB] pb-1 focus:outline-none focus:ring-0" style={{ color: "#123458", fontSize: "17px", fontWeight: "medium", borderBottom: loginInfo.errorDetails.isEmailError ? "2px solid red" : "" }} />
                             {loginInfo?.errorDetails?.isEmailError ? <span className=" text-[#e63946]">{loginInfo.errorDetails.emailErrorMsg}</span> : null}
                         </Col>
-                    </FormGroup>
-                    <FormGroup row>
-                        <Label for="examplePassword" sm={2} className="text-[#3d405b] font-medium" >
+                    </div>
+                    <div className="mb-4">
+                        {/* <Label for="examplePassword" sm={2} className="text-[#3d405b] font-medium" >
                             Password
-                        </Label>
-                        <Col sm={10}>
+                        </Label> */}
+                        {/* <Col sm={10}>
                             <Input id="password" name="password" placeholder="Password" type="password" value={loginInfo.password} onChange={(e) => handleChange(e)} style={{ backgroundColor: "#faedcd", color: "#123458", fontSize: "17px", fontWeight: "medium", border: loginInfo.errorDetails.isPasswordError ? "2px solid red" : "" }} />
                             {loginInfo?.errorDetails?.isPasswordError ? <span className=" text-[#e63946]">{loginInfo.errorDetails.passwordErrorMsg}</span> : null}
+                        </Col> */}
+                        <Col sm={10}>
+                            <input id="password" name="password" placeholder="Password" type="password" className=" w-full border-b-2 border-[#e6ccb2] pb-1 focus:outline-none focus:ring-0" value={loginInfo.password} onChange={(e) => handleChange(e)} style={{ color: "#123458", fontSize: "17px", fontWeight: "medium", borderBottom: loginInfo.errorDetails.isPasswordError ? "2px solid red" : "" }} />
+                            {loginInfo?.errorDetails?.isPasswordError ? <span className=" text-[#e63946]">{loginInfo.errorDetails.passwordErrorMsg}</span> : null}
                         </Col>
-                    </FormGroup>
+                    </div>
 
                     <div className=" flex justify-between">
                         <button className="bg-[#7f5539] text-[#fefae0] px-4 py-2 font-medium" style={{ borderRadius: "20px" }} onClick={(e) => handleLogin(e)}>Login</button>
