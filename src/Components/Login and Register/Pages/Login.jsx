@@ -99,7 +99,7 @@ const Login = () => {
     }, [])
 
     return (
-        <div className="flex w-full h-[100vh] items-center justify-center bg-gradient-to-b  from-[#fef9e7] via-[#f0f6ff] to-[#96C1EC]">
+        <div className="flex w-full h-[100vh] items-center justify-center bg-gradient-to-br from-[#fef9e7] via-[#dbeafe] to-[#96C1EC]">
             <div className=" w-[500px] p-6 m-3 rounded-lg bg-[#FFFCFB]" style={{ boxShadow: " 1px 1px 5px 1px #F4E7E1" }}>
                 <Form className="">
                     <div className=" mt-2 mb-[50px]">
