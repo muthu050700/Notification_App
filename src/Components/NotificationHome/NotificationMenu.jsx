@@ -1,14 +1,15 @@
 import settings from "../../assets/settings.png";
 import pending from "../../assets/wall-clock.png";
 import shoppingCart from "../../assets/shopping-cart.png";
-import crossImg from "../../assets/cross-button.png"
+import crossImg from "../../assets/cross-button.png";
+import menu from "../../assets/menu.png";
 const NotificationMenu = ({ setIsMenuOpen }) => {
     const filterList = [{
         id: 1,
         name: "Menu",
         bgColor: "bg-amber-300",
         textColor: "text-black",
-        imageURL: "https://i.pinimgproxy.com/?url=aHR0cHM6Ly9jZG4taWNvbnMtcG5nLmZsYXRpY29uLmNvbS8yNTYvOTQ1MC85NDUwODkzLnBuZw==&ts=1751051049&sig=14f404fea0f6e4d7c3b457e97bd1a2a15f8a5e95c1326cc27f802c7e314856d2"
+        imageURL: menu
     }, {
         id: 2,
         name: "Reject",

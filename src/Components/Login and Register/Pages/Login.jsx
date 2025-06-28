@@ -36,7 +36,8 @@ const Login = () => {
         }))
     }
 
-    const handleLogin = () => {
+    const handleLogin = (e) => {
+        e.preventDefault();
         let emailRegex = /^[a-zA-Z0-9._]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
         let passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#\$%\^&\*])(?=.{8,})/;
         let email = loginInfo?.email;
@@ -99,17 +100,17 @@ const Login = () => {
 
     return (
         <div className=" flex w-full h-[100vh] items-center justify-center bg-[#f1faee] ">
-            <div className=" w-[500px] p-6 m-3 rounded-lg" style={{ boxShadow: " 1px 1px 10px 6px #457b9d" }}>
+            <div className=" w-[500px] p-6 m-3 rounded-lg bg-[#fefae0]" style={{ boxShadow: " 1px 1px 10px 6px #457b9d" }}>
                 <Form className="">
                     <div>
-                        <h2 className=" font-extrabold text-3xl text-[#1d3557]">Hey, Welcome</h2>
+                        <h2 className=" font-bold text-3xl text-[#1d3557]">Hey, Welcome</h2>
                     </div>
                     <FormGroup row>
                         <Label for="exampleEmail" sm={2} className="text-[#1d3557] font-medium" >
                             Email
                         </Label>
                         <Col sm={10}>
-                            <Input id="email" name="email" placeholder="Email" type="email" value={loginInfo.email} onChange={(e) => handleChange(e)} style={{ backgroundColor: "#a8dadc", color: "#123458", fontSize: "17px", fontWeight: "medium", border: loginInfo.errorDetails.isEmailError ? "2px solid red" : "" }} />
+                            <Input id="email" name="email" placeholder="Email" type="email" value={loginInfo.email} onChange={(e) => handleChange(e)} style={{ backgroundColor: "#e9edc9", color: "#123458", fontSize: "17px", fontWeight: "medium", border: loginInfo.errorDetails.isEmailError ? "2px solid red" : "" }} />
                             {loginInfo?.errorDetails?.isEmailError ? <span className=" text-[#e63946]">{loginInfo.errorDetails.emailErrorMsg}</span> : null}
                         </Col>
                     </FormGroup>
@@ -118,13 +119,13 @@ const Login = () => {
                             Password
                         </Label>
                         <Col sm={10}>
-                            <Input id="password" name="password" placeholder="Password" type="password" value={loginInfo.password} onChange={(e) => handleChange(e)} style={{ backgroundColor: "#a8dadc", color: "#123458", fontSize: "17px", fontWeight: "medium", border: loginInfo.errorDetails.isPasswordError ? "2px solid red" : "" }} />
+                            <Input id="password" name="password" placeholder="Password" type="password" value={loginInfo.password} onChange={(e) => handleChange(e)} style={{ backgroundColor: "#e9edc9", color: "#123458", fontSize: "17px", fontWeight: "medium", border: loginInfo.errorDetails.isPasswordError ? "2px solid red" : "" }} />
                             {loginInfo?.errorDetails?.isPasswordError ? <span className=" text-[#e63946]">{loginInfo.errorDetails.passwordErrorMsg}</span> : null}
                         </Col>
                     </FormGroup>
 
                     <div className=" flex justify-between">
-                        <button className="bg-[#f77f00] text-[#1d3557] px-4 py-2 font-medium" style={{ borderRadius: "20px" }} onClick={handleLogin}>Login</button>
+                        <button className="bg-[#f77f00] text-[#1d3557] px-4 py-2 font-medium" style={{ borderRadius: "20px" }} onClick={(e) => handleLogin(e)}>Login</button>
                         <p className="mb-0 pt-2 text-[#415a77]">Forgot password?</p>
                     </div>
 
