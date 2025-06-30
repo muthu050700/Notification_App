@@ -23,11 +23,11 @@ const NotificationFilters = () => {
 
     return (
         <>
-            <div className="flex justify-between items-center py-2 fixed w-full top-0 overflow-hidden h-[40px] bg-[#d8e2dc] border-b-[1px] border-b-[#bcbd8b] p-2 shadow-xl z-10">
+            <div className="flex justify-between items-center py-2 fixed w-full top-0 overflow-hidden h-[50px]  bg-[#d8e2dc] border-b-[1px] border-b-[#bcbd8b] p-2 shadow-xl z-10">
                 {
                     filterList.map((item) => {
                         return (
-                            <div key={item.id} className={`w-fit py-2  rounded-lg flex justify-center items-center my-2 ${item.bgColor} cursor-pointer`}>
+                            <div key={item.id} className={`w-fit py-2 my-2  rounded-lg flex justify-center items-center ${item.bgColor} cursor-pointer`}>
                                 <div className=" px-2 flex items-center gap-2">
                                     <img src={crossImg} className=" w-[17px]" />
                                     <p className="text-sm font-bold text-center m-0">{item.name}</p>

@@ -43,7 +43,7 @@ const NotificationMenu = ({ setIsMenuOpen }) => {
 
     return (
         <>
-            <div className="flex justify-evenly items-center py-2 gap-3 fixed w-full bottom-0 overflow-hidden h-[10vh] bg-[#a6a2a2] p-2 shadow-lg z-10">
+            <div className="flex justify-evenly items-center py-2 gap-3 fixed w-full bottom-0 overflow-hidden h-[60px] bg-[#a6a2a2] p-2 shadow-lg z-10">
                 {
                     filterList.map((item) => {
                         return (
