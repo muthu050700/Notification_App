@@ -11,7 +11,7 @@ const NotificationHome = () => {
         <>
             <div className="min-h-[100vh] max-h-full relative">
                 <NotificationFilters />
-                <div className="pt-[8vh] pb-[13vh]">
+                <div className="pt-[50px] pb-[13vh]">
                     <div className="flex justify-between py-3 px-2">
                         <h3>App Name</h3>
                         <p>Profile image</p>
