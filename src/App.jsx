@@ -18,7 +18,9 @@ function App() {
   return (
     <>
       <SkeletonTheme baseColor="#202020" highlightColor="#444">
-        <Home />
+        <div className='bg-gradient-to-br from-[#fef9e7] via-[#dbeafe] to-[#96C1EC]'>
+          <Home />
+        </div>
         <Toaster position='top-right' />
       </SkeletonTheme>
     </>

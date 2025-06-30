@@ -1,6 +1,9 @@
 
 
+import crossImg from "../../assets/cross-button.png";
+
 const NotificationFilters = () => {
+
     const filterList = [{
         id: 1,
         name: "Approve",
@@ -17,14 +20,18 @@ const NotificationFilters = () => {
         bgColor: "bg-[#adb5bd]",
         textColor: "text-black"
     }]
+
     return (
         <>
-            <div className="flex justify-evenly items-center py-2 fixed w-full top-0 overflow-hidden h-[8vh] bg-[#d8e2dc] border-b-[1px] border-b-[#bcbd8b] p-2 shadow-xl z-10">
+            <div className="flex justify-between items-center py-2 fixed w-full top-0 overflow-hidden h-[8vh] bg-[#d8e2dc] border-b-[1px] border-b-[#bcbd8b] p-2 shadow-xl z-10">
                 {
                     filterList.map((item) => {
                         return (
-                            <div key={item.id} className={`w-[100px] h-[50px]  rounded-2xl flex justify-center items-center my-2 ${item.bgColor} cursor-pointer`}>
-                                <p className="text-lg font-bold text-center m-0">{item.name}</p>
+                            <div key={item.id} className={`w-fit py-2  rounded-lg flex justify-center items-center my-2 ${item.bgColor} cursor-pointer`}>
+                                <div className=" px-2 flex items-center gap-2">
+                                    <img src={crossImg} className=" w-[17px]" />
+                                    <p className="text-sm font-bold text-center m-0">{item.name}</p>
+                                </div>
                             </div>
                         )
                     })
