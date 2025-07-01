@@ -9,7 +9,6 @@ const NotificationList = () => {
         <div className=" bg-[#f1faee] min-h-[100vh] max-h-full ">
             <h1 className=" font-bold text-2xl text-center text-[#F1EFEC]">Notivication List</h1>
             <NotificationCart />
-            <NotificationCart />
             <div className=" flex justify-center">
                 <div className="fixed w-full bottom-0 overflow-hidden bg-[#ebeaea] p-2 shadow-lg rounded-2xl">
                     <div className="flex justify-between bg-[#ebeaea] rounded-[10px]">

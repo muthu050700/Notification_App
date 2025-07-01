@@ -43,7 +43,7 @@ const NotificationMenu = ({ setIsMenuOpen }) => {
 
     return (
         <>
-            <div className="flex justify-evenly items-center py-2 gap-3 fixed w-full bottom-0 overflow-hidden h-[60px] bg-[#a6a2a2] p-2 shadow-lg z-10">
+            <div className="flex justify-between items-center py-2 gap-3 fixed w-full bottom-0 overflow-hidden h-[60px] bg-[#ebeaea] p-2 shadow-lg z-10">
                 {
                     filterList.map((item) => {
                         return (
@@ -52,7 +52,7 @@ const NotificationMenu = ({ setIsMenuOpen }) => {
                                     item.name === "Menu" ? handleMenuBar() : "";
                                 }}>
                                     <img className=" w-[20px]" src={item.imageURL} />
-                                    <p className="text-medium font-bold text-center m-0">{item.name}</p>
+                                    <p className="text-[12px] font-bold text-center m-0">{item.name}</p>
                                 </div>
                             </div>
                         )
