@@ -3,38 +3,37 @@ import pending from "../../assets/wall-clock.png";
 import shoppingCart from "../../assets/shopping-cart.png";
 import crossImg from "../../assets/cross-button.png";
 import menu from "../../assets/menu.png";
+import { GrMenu } from "react-icons/gr";
+import { MdDashboard } from "react-icons/md";
+import { IoMdSettings } from "react-icons/io";
+import { FaShoppingCart } from "react-icons/fa";
+
 const NotificationMenu = ({ setIsMenuOpen }) => {
     const filterList = [{
         id: 1,
         name: "Menu",
         bgColor: "bg-amber-300",
         textColor: "text-black",
-        imageURL: menu
+        icon: <GrMenu />
     }, {
         id: 2,
-        name: "Reject",
+        name: "Dashboard",
         bgColor: "bg-green-500",
         textColor: "text-white",
-        imageURL: crossImg
+        icon: <MdDashboard />
     }, {
         id: 3,
-        name: "Pending",
+        name: "Settings",
         bgColor: "bg-yellow-500",
         textColor: "text-black",
-        imageURL: settings
-    }, {
-        id: 4,
-        name: "Pending",
-        bgColor: "bg-yellow-500",
-        textColor: "text-black",
-        imageURL: pending
+        icon: <IoMdSettings />
     },
     {
         id: 5,
         name: "Cart",
         bgColor: "bg-yellow-500",
         textColor: "text-black",
-        imageURL: shoppingCart
+        icon: <FaShoppingCart />
     }];
 
     const handleMenuBar = () => {
@@ -51,7 +50,8 @@ const NotificationMenu = ({ setIsMenuOpen }) => {
                                 <div key={item.id} className={`w-[50px] h-[50px]  rounded-2xl flex flex-col justify-center items-center cursor-pointer`} onClick={() => {
                                     item.name === "Menu" ? handleMenuBar() : "";
                                 }}>
-                                    <img className=" w-[20px]" src={item.imageURL} />
+                                    {/* <img className=" w-[20px]" src={item.imageURL} /> */}
+                                    {item.icon}
                                     <p className="text-[12px] font-bold text-center m-0">{item.name}</p>
                                 </div>
                             </div>
