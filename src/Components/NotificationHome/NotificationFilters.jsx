@@ -56,7 +56,7 @@ const NotificationFilters = ({ handleFilterFixed, fixedHeader }) => {
                                 <div className=" px-1 flex items-center gap-1 " onClick={() => setFilter(item.id)}>
                                     {/* <img src={crossImg} className=" w-[17px]" /> */}
                                     {item.icon}
-                                    <p className="text-[10px] font-bold  text-center m-0">{item.name}-({100})</p>
+                                    <p className="text-[11px] font-bold  text-center m-0">{item.name}-({100})</p>
                                 </div>
                             </div>
                         )
