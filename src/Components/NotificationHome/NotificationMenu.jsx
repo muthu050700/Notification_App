@@ -9,6 +9,7 @@ import { IoMdSettings } from "react-icons/io";
 import { FaShoppingCart } from "react-icons/fa";
 
 const NotificationMenu = ({ setIsMenuOpen }) => {
+
     const filterList = [{
         id: 1,
         name: "Menu",

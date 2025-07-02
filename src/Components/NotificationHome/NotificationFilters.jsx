@@ -6,8 +6,9 @@ import { SiTicktick } from "react-icons/si";
 import { FaTimesCircle } from "react-icons/fa";
 import { IoIosTime } from "react-icons/io";
 
-const NotificationFilters = () => {
+const NotificationFilters = ({ handleFilterFixed, fixedHeader }) => {
     const [filter, setFilter] = useState(null);
+
     const filterList = [{
         id: 1,
         name: "Approve",
@@ -26,11 +27,20 @@ const NotificationFilters = () => {
         bgColor: "bg-[#adb5bd]",
         textColor: "text-black",
         icon: <IoIosTime />
-    }]
+    }];
+
+
 
     return (
         <>
-            <div className="flex justify-between items-center py-2 fixed w-full top-0 overflow-hidden h-[50px]  bg-[#FDFAF6] border-b-[1px] border-b-[#bcbd8b] p-2 shadow-xl z-10">
+            <div className="flex justify-between py-3 px-2 gap-2 h-[50px]">
+                <div className=" flex gap-2 items-center justify-center">
+                    <img src="https://cdn-icons-png.freepik.com/512/6645/6645163.png" className=" w-[25px]" />
+                    <p className="mb-0">Notification App</p>
+                </div>
+                <p>Profile image</p>
+            </div>
+            <div className={`flex justify-between items-center py-2 ${fixedHeader ? "fixed w-full top-0 bg-[#FDFAF6]" : ""} overflow-hidden h-[50px] border-b-[1px] border-b-[#bcbd8b] p-2 shadow-xl z-10`}>
                 {
                     filterList.map((item) => {
                         const icon = item.icon;
